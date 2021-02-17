@@ -73,7 +73,7 @@ class BertAspectClassifier:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--text_sent', help='provide text')
+    parser.add_argument('--text_sent', help='provide text', required=True)
     parser.add_argument('--aspect', help='provide aspect tokens in list form [word1, word2,..]', nargs='+', required=True)
 
     args = parser.parse_args()
