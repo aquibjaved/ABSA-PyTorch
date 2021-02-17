@@ -13,7 +13,7 @@ import copy
 import numpy as np
 
 from transformers.modeling_bert import BertPooler, BertSelfAttention
-
+# from transformers.models.bert.modeling_bert import BertPooler, BertSelfAttention
 
 class SelfAttention(nn.Module):
     def __init__(self, config, opt):

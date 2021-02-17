@@ -10,7 +10,7 @@ class BERT_SPC(nn.Module):
     def __init__(self, bert, opt):
         super(BERT_SPC, self).__init__()
         self.bert = bert
-        self.dropout = nn.Dropout(opt.dropout)
+        self.dropout = nn.Dropout(0.4)
         self.dense = nn.Linear(opt.bert_dim, opt.polarities_dim)
 
     def forward(self, inputs):
