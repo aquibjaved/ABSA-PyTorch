@@ -75,6 +75,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--text_sent', help='provide text', required=True)
     parser.add_argument('--aspect', help='provide aspect tokens in list form [word1, word2,..]', nargs='+', required=True)
+    parser.add_argument('--model_path', help='provide model path', required=True)
 
     args = parser.parse_args()
 
@@ -94,7 +95,7 @@ if __name__ == '__main__':
     opt = Option()
     opt.model_name = 'bert_spc'
     opt.model_class = model_classes[opt.model_name]
-    opt.state_dict_path = '/Users/aquibkhan/Desktop/bert_spc_restaurent_val_acc_0.7774'
+    opt.state_dict_path = args.model_path #'/Users/aquibkhan/Desktop/bert_spc_restaurent_val_acc_0.7774'
     opt.max_seq_len = 85
     opt.bert_dim = 768
     opt.polarities_dim = 3
