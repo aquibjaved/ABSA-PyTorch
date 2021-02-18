@@ -12,8 +12,9 @@ import torch.nn as nn
 import copy
 import numpy as np
 
-from transformers.modeling_bert import BertPooler, BertSelfAttention
-# from transformers.models.bert.modeling_bert import BertPooler, BertSelfAttention
+# from transformers.modeling_bert import BertPooler, BertSelfAttention
+from transformers.models.bert.modeling_bert import BertPooler, BertSelfAttention
+
 
 class SelfAttention(nn.Module):
     def __init__(self, config, opt):
@@ -28,6 +29,7 @@ class SelfAttention(nn.Module):
                                             dtype=np.float32), dtype=torch.float32).to(self.opt.device)
         SA_out = self.SA(inputs, zero_tensor)
         return self.tanh(SA_out[0])
+
 
 class LCF_BERT(nn.Module):
     def __init__(self, bert, opt):

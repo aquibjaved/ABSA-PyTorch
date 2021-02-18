@@ -61,7 +61,6 @@ class BertAspectClassifier:
             'dependency_graph': dependency_graph,
         }
 
-        # print(type(torch.tensor([data[col]], device=self.opt.device) for col in self.opt.inputs_cols))
 
         t_inputs = [torch.tensor([data[col]], device=self.opt.device) for col in self.opt.inputs_cols]
 
