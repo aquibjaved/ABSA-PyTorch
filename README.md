@@ -16,7 +16,7 @@
 * numpy >= 1.13.3
 * sklearn
 * python 3.6 / 3.7
-* transformers
+* transformers > 3.0.0
 
 To install requirements, run `pip install -r requirements.txt`.
 
